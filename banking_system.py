@@ -27,7 +27,12 @@ class BankAccount:
     
 
     def withdraw(self, amount):
-        pass
+        "want to take out money, how much do you want to take out? what if you dont have any to take out?"
+        amount = float(input("Input amount to withdraw 0.00"))
+        if self.amount > 0:
+            print("you have f{amount}")
+
+
 
     def show_balance(self):
         pass
