@@ -2,7 +2,35 @@
 Sliding Window
 Leetcode Problems:
 53. Maximum Subarray 
-643. Maximum Average Subarray I
+
+def MaxSubArray(self, nums):
+    max_sub= nums[0]
+    curr_sum = 0
+
+    for n in nums:
+        if curSum<0:
+            curSum = 0
+        curSum += n
+        max_sub = max(max_sub, curSub)
+    return maxSub
+
+
+643. Maximum Average Subarray I:
+
+# Step 1: Get the sum of the first k elements
+initial_sum = sum(nums[:k])
+
+# Step 2: Assign to both variables
+curr_sum = initial_sum
+max_sum = initial_sum
+
+def findMaxAverage(self, nums):
+    curr_sum = max_sum = sum(nuns[:k])
+    for i in range(len(nums)-k):
+        curr_sum += nums[i:k] - nums[i]
+        max_sum = max(max_sum, curr_sum)
+    return max_sum/k
+
 3. Longest Substring without repeating characters
 76. Minimum Window substring
 
